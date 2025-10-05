@@ -23,9 +23,10 @@ def main():
     print('Cleaned covid19 data set🧹')
     
     
-    ans = analyze(data_cleaned, country_wise_count)
+    analyze(data_cleaned, country_wise_count)
+    print('Analysis done✅')
     
-    
+    visualize(data_cleaned, country_wise_count)
     
 if __name__ == '__main__':
     main()
