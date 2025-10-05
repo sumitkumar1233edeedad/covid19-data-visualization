@@ -3,6 +3,7 @@ import os
 from data_loader import load
 from cleaner import clean
 from analyzer import analyze
+from visualizer import visualize
 
 
 def main():
