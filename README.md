@@ -69,19 +69,21 @@ Optional log-scale charts
 Export plots as PNG for reports
 
 📂 Folder Structure
-covid19-data-visualization/
+ covid19-data-visualization/
 ├── src/
-│   ├── main.py           # Run the whole project
-│   ├── data_loader.py    # Load & preprocess data
-│   ├── analyzer.py       # Compute metrics (rolling avg)
-│   ├── visualizer.py     # Create plots
+│   ├── main.py            # Orchestrates loading, cleaning, plotting
+│   ├── data_loader.py     # Reads CSV files
+│   ├── cleaner.py         # Handles NaNs, fixes columns, filters dates
+│   ├── analyzer.py        # Calculates totals, moving avg, growth
+│   └── visualizer.py      # Builds all charts
 ├── data/
-│   └── owid-covid-data.csv
+│   ├── raw/               # Original Kaggle CSV files
+│   └── cleaned/           # Processed data (optional)
 ├── outputs/
-│   ├── plots/
-│   │   ├── total_cases_india.png
-│   │   └── daily_cases_world.png
-│   └── summary.txt
+│   ├── plots/             # Saved PNG charts
+│   └── summary.txt        # Insights & stats
+├── tests/
+│   └── test_analyzer.py   # Simple unit tests for calculations
 ├── README.md
 └── requirements.txt
 
