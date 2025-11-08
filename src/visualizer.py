@@ -32,7 +32,7 @@ def visualize(data_cleaned: pd.DataFrame, country_wise_count: pd.DataFrame) -> p
     ax.tick_params(axis='y', labelsize=10)
     ax.grid(True, alpha=0.3)
     fig.tight_layout()
-    fig.savefig(os.path.join(output_dir, 'total_confirmed_cases_over_time.png'), dpi=300, bbox_inches='tight')
+    fig.savefig(os.path.join(output_dir, 'total_confirmed_cases_over.png'), dpi=300, bbox_inches='tight')
     plt.close(fig)
 
     # Plot total deaths over time (line)
@@ -47,7 +47,7 @@ def visualize(data_cleaned: pd.DataFrame, country_wise_count: pd.DataFrame) -> p
     ax.tick_params(axis='y', labelsize=10)
     ax.grid(True, alpha=0.3)
     fig.tight_layout()
-    fig.savefig(os.path.join(output_dir, 'total_deaths_over_time.png'), dpi=300, bbox_inches='tight')
+    fig.savefig(os.path.join(output_dir, 'total_deaths_over.png'), dpi=300, bbox_inches='tight')
     plt.close(fig)
 
     # Bar chart for death count (use same locator/formatter for consistent x-axis)
@@ -62,7 +62,7 @@ def visualize(data_cleaned: pd.DataFrame, country_wise_count: pd.DataFrame) -> p
     ax.tick_params(axis='y', labelsize=10)
     ax.grid(True, alpha=0.3)
     fig.tight_layout()
-    fig.savefig(os.path.join(output_dir, 'total_deaths_over_time_bar_chart.png'), dpi=300, bbox_inches='tight')
+    fig.savefig(os.path.join(output_dir, 'total_deaths_over_time_bar.png'), dpi=300, bbox_inches='tight')
     plt.close(fig)
 
     return data_cleaned, country_wise_count
